@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            /* margin-left: 300px; */
+        }
+        #btn {
+            height: fit-content;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            padding :10px;
+            background-color: blue;
+            color: antiquewhite;
+            /* border-radius: 10px; */
+            justify-content: center;
+            text-align: center;
+        }
+        #btn:hover {
+            background-color: red;
+        }
+       #btn:visited {
+        background-color: yellow;
+       }
+       body {
+        background-color: black;
+       }
+       h1,footer {
+        color: aqua;
+       }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Simple JS Project</h1>
+        </div>
+    </section>
+
+    <div class="container">
+        <center> <img src="Off.jpg" id="img" width="250px">
+        <button id="btn">Switch On</button></center>
+    </div>
+    <div class="container">
+
+</div>
+  <div class="container">
+    <footer>All rights Reserved Rahul Rai @2023</footer>
+</div>
+
+    <script>
+      var btn = document.getElementById("btn")
+      var img = document.getElementById("img")                            
+      btn.addEventListener('click',changeImg)
+      function changeImg(event) {
+        if(btn.textContent.includes("On")){
+          img.src = "On.jpg";
+          btn.textContent = "Switch Off";
+        }
+        else{
+            img.src = "Off.jpg";
+          btn.textContent = "Switch On";
+        }
+      };
+    </script>
+</body>
+</html>
